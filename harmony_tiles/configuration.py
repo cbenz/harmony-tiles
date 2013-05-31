@@ -8,7 +8,7 @@ import logging
 import os
 
 from biryani1 import strings
-from biryani1.baseconv import (check, cleanup_line, default, function, guess_bool, not_none, pipe, struct)
+from biryani1.baseconv import (check, default, function, guess_bool, not_none, pipe, struct)
 
 
 def load_configuration(global_conf, app_conf):
@@ -22,7 +22,6 @@ def load_configuration(global_conf, app_conf):
             'app_conf': default(app_conf),
             'app_dir': default(app_dir),
             'app_name': default('Harmony Tiles'),
-            'cache_dir': default(os.path.join(os.path.dirname(app_dir), 'cache')),
             'debug': pipe(guess_bool, default(False)),
             'global_conf': default(global_conf),
             'log_level': pipe(

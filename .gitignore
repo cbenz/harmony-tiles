@@ -2,6 +2,4 @@
 *.pyc
 *.pyo
 *~
-/cache/
-/data/
 /development-*.ini
